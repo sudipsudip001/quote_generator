@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.selection{
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.bulb{
+    vertical-align: middle;
+    height: 90px;
+    cursor: pointer;
+}
+#genre{
+    vertical-align: middle;
+    padding: 15px;
+    cursor: pointer;
+}
+.main{
+    padding: 130px;
+    text-align: center;
+}
+.displayQuote{
+    font-size: 40px;
+}
+.display{
+    font-weight: bold;
+    color: grey;
+    padding-left: 250px;
+}
+.buttons{
+    padding: 130px;
+    text-align: center;
+}
+#prev, #next, #rand{
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer ;
+}

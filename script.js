@@ -7,6 +7,22 @@ const genre = document.getElementById('genre');
 const display = document.getElementsByClassName('display')[0];
 const displayQuote = document.getElementsByClassName('displayQuote')[0];
 
+//for glowing and dimming bulb
+const lights = document.getElementsByClassName('bulb')[0];
+let original = false;
+lights.addEventListener('click', ()=>{
+    if(original){
+        document.body.style.backgroundColor = 'white';
+        document.body.style.color = 'black';
+        lights.src = './images/bulbOn.png';
+    }else{
+        document.body.style.backgroundColor = 'black';
+        document.body.style.color = 'white';
+        lights.src = './images/bulbOff.png';
+    }
+    original = !original;
+})
+
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const randomly = document.getElementById('rand');

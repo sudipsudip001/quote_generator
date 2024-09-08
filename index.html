@@ -7,24 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <select name="genre" id="genre">
-        <option id="Choice">Choose genre</option>
-        <option value="Science" id="Science">Science</option>
-        <option value="Arts" id="Arts">Arts</option>
-        <option value="Philosophy" id="Philosophy">Philosophy</option>
-        <option value="Sports" id="Sports">Sports</option>
-    </select>
-    <p>
-        <span class="display"></span>
-    </p>
-    <p>
-        <span class="displayQuote"></span>
-    </p>
-    <button id="prev">Prev</button>
-    <button id="next">Next</button>
-
-    <button id="rand">Random quote</button>
-
+    <div class="selection">
+        <img class="bulb" src="./images/bulbOn.png" alt="glowing/dim bulb">
+        <select name="genre" id="genre">
+            <option id="Choice">Choose genre</option>
+            <option value="Science" id="Science">Science</option>
+            <option value="Arts" id="Arts">Arts</option>
+            <option value="Philosophy" id="Philosophy">Philosophy</option>
+            <option value="Sports" id="Sports">Sports</option>
+        </select>
+    </div>
+    <div class="main">
+        <p>
+            <span class="displayQuote"></span>
+        </p>
+        <p>
+            <span class="display"></span>
+        </p>
+    </div>
+    <div class="buttons">
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+        <button id="rand">Random quote</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
