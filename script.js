@@ -6,6 +6,8 @@ const choice = document.getElementById("Choice");
 const genre = document.getElementById('genre');
 const display = document.getElementsByClassName('display')[0];
 const displayQuote = document.getElementsByClassName('displayQuote')[0];
+const zoomOut = document.getElementsByClassName('zoom_out')[0];
+const zoomIn = document.getElementsByClassName('zoom_in')[0];
 
 //for glowing and dimming bulb
 const lights = document.getElementsByClassName('bulb')[0];
@@ -15,13 +17,46 @@ lights.addEventListener('click', ()=>{
         document.body.style.backgroundColor = 'white';
         document.body.style.color = 'black';
         lights.src = './images/bulbOn.png';
+        genre.style.backgroundColor = 'white';
+        genre.style.color = 'black';
+        document.getElementById('prev').style.backgroundColor = 'lightgrey';
+        document.getElementById('prev').style.color = 'black';
+        document.getElementById('next').style.backgroundColor = 'lightgrey';
+        document.getElementById('next').style.color = 'black';
+        document.getElementById('rand').style.backgroundColor = 'lightgrey';
+        document.getElementById('rand').style.color = 'black';
+        zoomIn.src = './images/zoom_in.png';
+        zoomOut.src = './images/zoom_out.png';
     }else{
         document.body.style.backgroundColor = 'black';
         document.body.style.color = 'white';
         lights.src = './images/bulbOff.png';
+        genre.style.backgroundColor = 'black';
+        genre.style.color = 'white';
+        document.getElementById('prev').style.backgroundColor = '#333';
+        document.getElementById('prev').style.color = 'white';
+        document.getElementById('next').style.backgroundColor = '#333';
+        document.getElementById('next').style.color = 'white';
+        document.getElementById('rand').style.backgroundColor = '#333';
+        document.getElementById('rand').style.color = 'white';
+        zoomIn.src = './images/zoom_in_light.png';
+        zoomOut.src = './images/zoom_out_light.png';
     }
     original = !original;
 })
+
+//for controlling font-sizes
+const sizes=[30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80, 85, 90];
+let i = 0;
+zoomIn.addEventListener('click', ()=>{
+    (i<11)?i++:i;
+    displayQuote.style['font-size'] = sizes[i] + 'px';
+});
+zoomOut.addEventListener('click', ()=>{
+    (i>0)?i--:i;
+    displayQuote.style['font-size'] = sizes[i] + 'px';
+});
+
 
 const prev = document.getElementById('prev');
 const next = document.getElementById('next');
@@ -87,8 +122,8 @@ genre.addEventListener('click', ()=>{
         (index === Object.keys(sportsQuotes).length-1)? next.style.display = 'none': next.style.display='';
         randomly.style.display = '';
     }else{
-        display.textContent = 'Select a genre please';
-        displayQuote.textContent = '';
+        displayQuote.textContent = 'Select a genre please';
+        display.textContent = '';
         prev.style.display = 'none';
         next.style.display = 'none';
         randomly.style.display = 'none';

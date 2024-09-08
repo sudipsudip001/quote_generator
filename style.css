@@ -13,17 +13,26 @@ body{
     height: 90px;
     cursor: pointer;
 }
+.zoom_in{
+    height: 50px;
+    vertical-align: middle;
+}
+.zoom_out{
+    height: 50px;
+    vertical-align: middle;
+}
 #genre{
     vertical-align: middle;
     padding: 15px;
     cursor: pointer;
+    border-radius: 8px;
 }
 .main{
     padding: 130px;
     text-align: center;
 }
 .displayQuote{
-    font-size: 40px;
+    font-size: 30px;
 }
 .display{
     font-weight: bold;
