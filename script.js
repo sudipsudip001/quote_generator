@@ -50,7 +50,6 @@ const sizes=[30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
 let i = 0;
 zoomIn.addEventListener('click', ()=>{
     (i<10)?i++:i;
-    console.log(sizes[i]);
     displayQuote.style['font-size'] = sizes[i] + 'px';
 });
 zoomOut.addEventListener('click', ()=>{
