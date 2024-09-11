@@ -45,6 +45,19 @@ lights.addEventListener('click', ()=>{
     original = !original;
 })
 
+//for hiding the initial intro
+const intro = document.getElementsByClassName("intro")[0];
+const bodyElement = document.getElementsByClassName("body-content")[0];
+
+intro.addEventListener('click', ()=>{
+    intro.classList.add('hidden');
+
+    intro.addEventListener('transitioned', ()=>{
+        intro.style.display = 'none';
+    }, {once: true});
+    bodyElement.style.display = 'block';
+});
+
 //for controlling font-sizes
 const sizes=[30, 35, 40, 45, 50, 55, 60, 65, 70, 75, 80];
 let i = 0;

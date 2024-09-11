@@ -5,43 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quote generator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="welcome.css">
+    <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,700,500,600,300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="selection">
-        <img class="bulb" src="./images/bulbOn.png" alt="glowing/dim bulb">
-        <select name="genre" id="genre">
-            <option id="Choice" style="background-color: lightgrey;">Choose genre</option>
-            <option value="Science" id="Science">Science</option>
-            <option value="Arts" id="Arts">Arts</option>
-            <option value="Philosophy" id="Philosophy">Philosophy</option>
-            <option value="Sports" id="Sports">Sports</option>
-        </select>
-        <img class="zoom_in" src="./images/zoom_in.png" alt="zoom in button">
-        <img class="zoom_out" src="./images/zoom_out.png" alt="zoom out button">
+    <div class="intro">
+        <p class="actual-text">Quote Generator</p>
+        <p class="instruction">Click to continue</p>
     </div>
-    <div class="controller">
-        <div class="controller1">
-            <button id="prev">&lt;</button>
+    <div class="body-content" style="display: none;">
+        <div class="selection">
+            <img class="bulb" src="./images/bulbOn.png" alt="glowing/dim bulb">
+            <select name="genre" id="genre">
+                <option id="Choice" style="background-color: lightgrey;">Choose genre</option>
+                <option value="Science" id="Science">Science</option>
+                <option value="Arts" id="Arts">Arts</option>
+                <option value="Philosophy" id="Philosophy">Philosophy</option>
+                <option value="Sports" id="Sports">Sports</option>
+            </select>
+            <img class="zoom_in" src="./images/zoom_in.png" alt="zoom in button">
+            <img class="zoom_out" src="./images/zoom_out.png" alt="zoom out button">
         </div>
-        <div class="main">
-            <div class="quote">
-                <p>
-                    <span class="displayQuote"></span>
-                </p>
+        <div class="controller">
+            <div class="controller1">
+                <button id="prev">&lt;</button>
             </div>
-            <div class="author">
-                <p>
-                    <span class="display"></span>
-                </p>
+            <div class="main">
+                <div class="quote">
+                    <p>
+                        <span class="displayQuote"></span>
+                    </p>
+                </div>
+                <div class="author">
+                    <p>
+                        <span class="display"></span>
+                    </p>
+                </div>
+            </div>
+            <div class="controller2">
+                <button id="next">&gt;</button>
             </div>
         </div>
-        <div class="controller2">
-            <button id="next">&gt;</button>
+        <div class="buttons">
+            <button id="rand">Random quote</button>
         </div>
-    </div>
-    <div class="buttons">
-        <button id="rand">Random quote</button>
     </div>
     <script src="script.js"></script>
 </body>
